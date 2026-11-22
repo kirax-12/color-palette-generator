@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Palette Generator — Remike Dev</title>
+<meta name="description" content="Bikin palet warna yang harmonis dalam sekali pencet: analogous, komplementer, triadic, pastel, vibrant. Kunci warna favoritmu, salin HEX atau variabel CSS-nya. Jalan 100% di browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#top">Color<span>Palette</span></a>
+  <p class="header-note">5 warna · 5 skema · 100% lokal</p>
+</header>
+<div class="tape" aria-hidden="true"><span>Tekan Spasi Buat Palet Baru * Kunci Warna Favoritmu * Salin HEX Sekali Klik * Analogous * Komplementer * Triadic * Pastel * Vibrant * Tekan Spasi Buat Palet Baru * Kunci Warna Favoritmu * Salin HEX Sekali Klik *</span></div>
+
+<main id="top">
+  <section class="hero">
+    <p class="hero-kicker">generator palet warna</p>
+    <h1>Satu pencet, <span class="hl">lima warna</span> yang nyambung.</h1>
+    <p class="hero-sub">Bukan asal acak — palet di sini disusun dari teori warna: satu hue dasar, lalu dipecah pakai skema analogous, komplementer, triadic, pastel, atau vibrant. Ada warna yang sreg? <strong>Kunci aja</strong>, sisanya yang diganti.</p>
+  </section>
+
+  <section class="panel controls-panel">
+    <h2>Atur Paletnya</h2>
+    <span class="panel-sub">spasi juga bisa, kayak lagi main piano ↓</span>
+    <div class="controls-row">
+      <div class="field-inline">
+        <label class="field-label" for="scheme-select">Skema warna</label>
+        <select id="scheme-select" class="select">
+          <option value="acak" selected>Acak — ganti-ganti tiap generate</option>
+          <option value="analogous">Analogous — tetanggaan hue</option>
+          <option value="komplementer">Komplementer — saling berhadapan</option>
+          <option value="triadic">Triadic — segitiga hue</option>
+          <option value="pastel">Pastel — lembut & terang</option>
+          <option value="vibrant">Vibrant — jenuh & berani</option>
+        </select>
+      </div>
+      <div class="btn-row btn-row-end">
+        <button class="btn btn-green" id="generate-btn" type="button">Generate Palet →</button>
+        <button class="btn btn-white" id="copy-css-btn" type="button">Salin CSS</button>
+      </div>
+    </div>
+    <div class="row row-between">
+      <p class="meta">Skema aktif: <strong id="scheme-name">—</strong></p>
+      <p class="msg" id="global-msg" role="status"></p>
+    </div>
+    <p class="meta hint">Tips: tekan <kbd>Spasi</kbd> di mana aja buat generate ulang. Klik ikon kunci di warna yang mau dipertahankan.</p>
+  </section>
+
+  <section aria-label="Palet warna saat ini">
+    <div class="palette" id="palette"></div>
+  </section>
+
+  <section class="panel history-panel">
+    <h2>Riwayat Palet</h2>
+    <span class="panel-sub">8 palet terakhir, klik buat balikin ↓</span>
+    <p class="empty-note" id="history-empty">Belum ada riwayat. Generate palet pertama kamu, nanti dia nongol di sini.</p>
+    <div class="history-grid" id="history-grid"></div>
+  </section>
+
+  <p class="closing-note">Buat yang lagi desain web atau aplikasi: tombol <strong>Salin CSS</strong> ngasih variabel <code>:root</code> siap tempel — tinggal pakai sebagai <code>var(--warna-1)</code> dan seterusnya di stylesheet kamu.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>Dibuat oleh Remike Dev</p>
+    <p><a href="https://github.com/kirax-12" target="_blank" rel="noopener">github.com/kirax-12</a> · <a href="#top">Kembali ke atas ↑</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
