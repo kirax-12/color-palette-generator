@@ -1,5 +1,7 @@
 # Color Palette Generator
 
+**Demo live:** [color-palette-generator di GitHub Pages](https://kirax-12.github.io/color-palette-generator/)
+
 Generator palet warna harmonis berbasis teori warna — bukan asal acak. Satu klik (atau satu pencetan spasi) menghasilkan 5 warna yang saling nyambung, lengkap dengan kode HEX dan RGB-nya.
 
 **[Lihat kode di GitHub](https://github.com/kirax-12/color-palette-generator)**
